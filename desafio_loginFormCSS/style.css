@@ -1,0 +1,226 @@
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo logo"
+    "form img";
+}
+
+.containerForm {
+    grid-area: form;
+    background: var(--background);
+    width: 960px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imagemForm {
+    grid-area: img;
+    width: 100vw;
+    height: 100vh;
+}
+
+.imagemForm img {
+    width: 960px;
+    height: 100%;
+}
+
+.container.logo {
+    grid-area: logo;
+    position: absolute;
+    float: right;
+    padding: 40px;
+    width: 115px;
+    height: 28px;
+}
+
+.containerForm form{
+    width: 572px;
+    height: 520px;
+    background: var(--form-background);
+    border-radius: 4px;
+}
+
+.headerForm {
+    position: relative;
+    width: 360px;
+    height: 64px;
+    left: 118px;
+    top: 54px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-title);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.headerForm img {
+    margin-right: 10px;
+}
+
+.headerForm p {
+    color: var(--text-base);
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.formControl {
+    position: relative;
+    width: 335px;
+    height: 73px;
+    left: 118px;
+    top: 90px;
+}
+
+.formControl label {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--text-base);
+}
+
+.formControl input {
+    width: 300px;
+    height: 44px;
+    margin-top: 5px;
+    border-radius: 4px;
+    background: var(--form-background);
+    border: 3px solid var(--text-base);
+    padding-left: 40px;
+    outline: 0;
+    color: var(--text-base);
+}
+.formControl input::placeholder{
+    color: var(--text-base);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 16.41px;
+}
+
+.formControl input[name="email"] {
+    background-image: url(./images/mail.svg);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 11px;
+
+}
+
+.formControl input[name="senha"] {
+    background-image: url(./images/lock.svg);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 11px;
+}
+
+.formControl input:active, input:focus {
+    border: 3px solid var(--primary-color);
+}
+
+.formControl input[name="email"]:active, input[name="email"]:focus {
+    background-image: url(./images/mail-focus.svg);
+}
+
+.formControl input[name="senha"]:active, input[name="senha"]:focus {
+    background-image: url(./images/lock-focus.svg);
+}
+
+.footerControl {
+    position: relative;
+    width: 345px;
+    height: 20px;
+    left: 118px;
+    top: 220px;
+}
+
+input[type="checkbox"]{
+    float: left;
+    width:20px;
+    height: 20px;
+}
+
+.forgetSenha {
+    float: right;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--primary-color);
+}
+
+
+.rememberPass {
+    float: left;
+    margin-left: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--text-base);  
+}
+
+button[type="submit"] {
+
+    position: relative;
+    width: 345px;
+    height: 51px;
+    left: 118px;
+    top: 250px;
+    outline: none;
+    border: none;
+
+    background: #FFC632;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #473404;
+    letter-spacing: 0.015em;
+}
+
+.footerText {
+    position: relative;
+    width: 345px;
+    height: 51px;
+    left: 118px;
+    top: 260px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #FFC632;
+
+}
